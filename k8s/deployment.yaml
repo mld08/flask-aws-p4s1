@@ -41,3 +41,22 @@ spec:
       targetPort: 5000
   type: LoadBalancer
 ---
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: app-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+# spec:
+#   rules:
+#   - host: app-aws-p4s1.local
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: flask-aws-p4s1-service
+#             port:
+#               number: 80
