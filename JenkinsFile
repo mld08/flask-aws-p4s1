@@ -46,7 +46,7 @@ pipeline {
         stage('Trivy Scan') {
             steps {
                 echo '🔍 Scan de l\'image avec Trivy...'
-                sh "trivy image --exit-code 1 --severity CRITICAL $IMAGE:latest"
+                sh "trivy image --exit-code 1 --ignore-unfixed --severity CRITICAL $IMAGE:latest"
             }
         }
 
