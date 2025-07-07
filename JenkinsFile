@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     echo 'Analyse SonarQube du code...'
-                    sh "${tool 'SonarScanner'}/bin/sonar-scanner -Dsonar.projectKey=flask-aws-p4s1 -Dsonar.projectName=Flask AWS P4S1 -Dsonar.sources=./app -Dsonar.language=py -Dsonar.sourceEncoding=UTF-8"
+                    sh "${tool 'SonarScanner'}/bin/sonar-scanner -Dsonar.projectKey=flask-aws-p4s1 -Dsonar.sources=./app -Dsonar.language=py -Dsonar.sourceEncoding=UTF-8"
                 }
             }
         }
