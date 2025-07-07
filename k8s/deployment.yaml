@@ -37,10 +37,10 @@ spec:
     app: flask-aws-p4s1 
   ports:
     - protocol: TCP 
-      port: 5000
+      port: 80
       targetPort: 5000
-      # nodePort: 30519
-  type: LoadBalancer  
+      nodePort: 30519
+  type: NodePort  
 
 ---
 
