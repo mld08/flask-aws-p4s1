@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = 'mldiop08/flask-aws-p4s1'
+        IMAGE = 'mldiop08/flask-aws-p4s1' // Image Docker à construire et à pousser
         DOCKER_CREDENTIALS_ID = 'userprofile-credentials' // Replace with your Docker Hub credentials ID
         DOCKERHUB_USER = 'mldiop08' // Replace with your Docker Hub username
         DOCKER_CREDENTIALS = credentials('userprofile-credentials')  // Replace with your Docker Hub credentials ID
