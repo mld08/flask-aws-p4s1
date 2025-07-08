@@ -37,9 +37,9 @@ spec:
     app: flask-aws-p4s1 
   ports:
     - protocol: TCP 
-      port: 80
-      targetPort: 5000
-      nodePort: 30519
+      port: 80 # Exposed port
+      targetPort: 5000 # Port on the container
+      nodePort: 30519 # NodePort for external access
   type: NodePort  
 
 ---
